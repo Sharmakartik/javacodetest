@@ -1,5 +1,6 @@
 pipeline {
-  agent any
+  pipeline {
+    agent { label 'window' }
   tools {
   jdk 'java'
   maven 'maven'
