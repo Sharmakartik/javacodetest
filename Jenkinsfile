@@ -18,13 +18,11 @@
                  echo """" build1 """
                  echo "build1currentResult: ${currentBuild.currentResult}"
                 
-                 script { 
+                 script{ 
               
-                h.mvn 'clean '
+                     h.mvn'clean'
                    build()
-                
-              
-               } 
+                 } 
               }
         }
         stage('Test') { 
@@ -34,11 +32,9 @@
                  echo """" test1 """
                  echo "test11currentResult: ${currentBuild.currentResult}"
                 
-                script { 
+                script{ 
                // h.cmmdd()
-               // Utilities.mvn 'test'
-                
-              
+               // Utilities.mvn 'test' 
               }
             }
             post {
