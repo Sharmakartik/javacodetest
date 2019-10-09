@@ -15,7 +15,8 @@
                                    echo """" build1 """
                                    echo "build1currentResult: ${currentBuild.currentResult}"
                            script{
-                              build()
+                              log.info'hello'
+                              log.warning'red alert'
                            
                            }
                                  
