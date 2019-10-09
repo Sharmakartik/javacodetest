@@ -19,8 +19,9 @@
                  echo "build1currentResult: ${currentBuild.currentResult}"
                 
                  script { 
-              //  h.cmmdd()
-                Utilities.mvn 'clean '
+              
+                h.mvn 'clean '
+                   build()
                 
               
                } 
@@ -35,7 +36,7 @@
                 
                 script { 
                // h.cmmdd()
-                Utilities.mvn 'test'
+               // Utilities.mvn 'test'
                 
               
               }
