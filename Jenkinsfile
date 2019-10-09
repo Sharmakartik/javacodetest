@@ -1,26 +1,43 @@
-pipeline {
-  pipeline {
-    agent { label 'window' }
-  tools {
-  jdk 'java'
-  maven 'maven'
-   }
-  stages {
+  
+@Library('kartiklibrary') _
+
+
+
+
+ pipeline {
+    agent any
+      tools {
+         jdk 'java'
+         maven 'maven'
+             }
+    stages {
         stage('Build') { 
             steps {
-               logstash {
+               
                 bat 'mvn -B -DskipTests clean package'      
                  echo """" build1 """
                  echo "build1currentResult: ${currentBuild.currentResult}"
+                
+                 script { 
+                h.cmmdd()
+                utils.mvn 'clean package'
+                
+              
                } 
               }
         }
         stage('Test') { 
             steps { 
-              logstash {
+              
                 bat 'mvn test' 
                  echo """" test1 """
                  echo "test11currentResult: ${currentBuild.currentResult}"
+                
+                script { 
+                h.cmmdd()
+                utils.mvn 'clean package'
+                
+              
               }
             }
             post {
@@ -29,13 +46,13 @@ pipeline {
                   
                     junit 'target/surefire-reports/*.xml'   
                            
-                  logstashSend failBuild: true, maxLines: 1000
+                 
                  
                 }
             }
         }
    
-       stage('sonarcube analysis') {
+     /* stage('sonarcube analysis') {
             steps {
               logstash {
                withSonarQubeEnv('sonarserver'){
@@ -122,13 +139,13 @@ pipeline {
            }
          }
        }        
-    }
+    }*/
 
   }
 
 
 post {
-   always {
+   /*always {
           logstashSend failBuild: true, maxLines: 1000   
           echo "PipelinecurrentResult: ${currentBuild.currentResult}"
         }
@@ -138,11 +155,11 @@ post {
              subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
              body: "Something is wrong with ${env.BUILD_URL}"
     
-    }
+    }*/
     success { 
        echo """ 
-             ONLY PRINT
-             mail to: 'kartik3588@gmail.com',
+             ONLY POST ACTION
+            
              """
             
      }
