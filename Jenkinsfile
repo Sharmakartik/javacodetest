@@ -20,7 +20,7 @@
                 
                  script { 
               //  h.cmmdd()
-                Utilities.mvn 'clean package'
+                Utilities.mvn 'clean '
                 
               
                } 
@@ -35,7 +35,7 @@
                 
                 script { 
                // h.cmmdd()
-                Utilities.mvn 'clean package'
+                Utilities.mvn 'test'
                 
               
               }
