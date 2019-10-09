@@ -15,14 +15,11 @@
                                    echo """" build1 """
                                    echo "build1currentResult: ${currentBuild.currentResult}"
                 
-                                   script{ 
-                                       build()
-                                          } 
-                                  }
+                                 
         
                                }
-                     }
-     }
+                             }
+                          }
         
                  
         
