@@ -1,6 +1,6 @@
   
 @Library('kartiklibrary') _
- def h= new Utilities(this)
+ 
  pipeline {
     agent any
       tools {
@@ -16,7 +16,6 @@
                                    echo "build1currentResult: ${currentBuild.currentResult}"
                 
                                    script{ 
-                                       h.mvn'clean'
                                        build()
                                           } 
                                   }
