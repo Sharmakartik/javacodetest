@@ -19,8 +19,8 @@
                  echo "build1currentResult: ${currentBuild.currentResult}"
                 
                  script { 
-                h.cmmdd()
-                utils.mvn 'clean package'
+              //  h.cmmdd()
+                Utilities.mvn 'clean package'
                 
               
                } 
@@ -34,8 +34,8 @@
                  echo "test11currentResult: ${currentBuild.currentResult}"
                 
                 script { 
-                h.cmmdd()
-                utils.mvn 'clean package'
+               // h.cmmdd()
+                Utilities.mvn 'clean package'
                 
               
               }
