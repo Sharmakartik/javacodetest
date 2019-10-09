@@ -25,6 +25,7 @@
                  } 
               }
         }
+    }
         stage('Test') { 
             steps { 
               
