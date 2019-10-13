@@ -17,7 +17,7 @@
                            script{
                               log.info'hello'
                               log.warning'red alert'
-                              Shell.mvn'clean'
+                              build()
                            
                            }
                                  
