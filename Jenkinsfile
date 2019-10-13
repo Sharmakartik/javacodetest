@@ -17,7 +17,7 @@
                            script{
                               log.info'hello'
                               log.warning'red alert'
-                              build 'package'
+                              build 'clean'
                            
                            }
                                  
