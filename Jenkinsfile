@@ -18,7 +18,7 @@
                               log.info'hello'
                               log.warning'red alert'
                               build 'clean'
-                              prime.parallelize'2' 
+                             // prime.parallelize'2' 
                            }
                                  
         
