@@ -18,7 +18,7 @@
                               log.info'hello'
                               log.warning'red alert'
                               build 'clean'
-                              prime '2'  
+                              prime 'two'  
                            }
                                  
         
