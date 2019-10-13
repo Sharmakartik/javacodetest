@@ -17,7 +17,8 @@
                            script{
                               log.info'hello'
                               log.warning'red alert'
-                              build()
+                              build 'clean'
+                              prime '2'
                            }
                                  
         
